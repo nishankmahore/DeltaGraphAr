@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deltagraphar"
+version = "0.1.0"
+license = { text = "MIT" }
+authors = [
+    { name = "Nishank Mahore", email = "nishankmahore@gmail.com" },
+]
+description = "A mutable, versioned property-graph store built on the GraphAr physical layout with ACID semantics delegated to LakeFS."
+requires-python = ">=3.10"
+dependencies = [
+    "pyarrow>=14.0",
+    "pyyaml>=6.0",
+    "lakefs>=0.7",
+    "lakefs-spec>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "hypothesis>=6.100",
+    "pandas>=2.0",
+]
+
+[project.scripts]
+deltagraphar = "deltagraphar.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

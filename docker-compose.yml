@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  lakefs:
+    image: treeverse/lakefs:latest
+    ports:
+      - "8000:8000"
+    environment:
+      LAKEFS_BLOCKSTORE_TYPE: local
+      LAKEFS_BLOCKSTORE_LOCAL_PATH: /data
+      LAKEFS_AUTH_ENCRYPT_SECRET_KEY: "some-random-secret-for-local-dev"
+      LAKEFS_INSTALLATION_USER_NAME: admin
+      LAKEFS_INSTALLATION_ACCESS_KEY_ID: AKIAIOSFODNN7EXAMPLE
+      LAKEFS_INSTALLATION_SECRET_ACCESS_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+    volumes:
+      - lakefs-data:/data
+
+volumes:
+  lakefs-data:
