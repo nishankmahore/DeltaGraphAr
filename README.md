@@ -15,10 +15,18 @@ Pure-Python reference implementation. Suitable for graph datasets that evolve ov
 ## Install
 
 ```bash
-pip install -e ".[dev]"
+pip install deltagraphar
 ```
 
 Requires Python ≥ 3.10.
+
+For development (includes pytest, hypothesis, pandas):
+
+```bash
+git clone https://github.com/nishankmahore/DeltaGraphAr.git
+cd DeltaGraphAr
+pip install -e ".[dev]"
+```
 
 ## Quickstart
 

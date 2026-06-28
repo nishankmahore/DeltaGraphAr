@@ -10,6 +10,19 @@ authors = [
     { name = "Nishank Mahore", email = "nishankmahore@gmail.com" },
 ]
 description = "A mutable, versioned property-graph store built on the GraphAr physical layout with ACID semantics delegated to LakeFS."
+readme = "README.md"
+keywords = ["graph", "graphar", "lakefs", "parquet", "versioning", "property-graph"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering",
+]
 requires-python = ">=3.10"
 dependencies = [
     "pyarrow>=14.0",
@@ -17,6 +30,11 @@ dependencies = [
     "lakefs>=0.7",
     "lakefs-spec>=0.12",
 ]
+
+[project.urls]
+Homepage = "https://github.com/nishankmahore/DeltaGraphAr"
+Repository = "https://github.com/nishankmahore/DeltaGraphAr"
+"Bug Tracker" = "https://github.com/nishankmahore/DeltaGraphAr/issues"
 
 [project.optional-dependencies]
 dev = [
