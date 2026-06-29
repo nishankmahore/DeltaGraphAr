@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.1] — 2026-06-29
+
+### Fixed
+- Switched GitHub Actions publish workflow from OIDC trusted publishing to API token auth
+
 ## [0.1.0] — 2026-06-28
 
 Initial release.
